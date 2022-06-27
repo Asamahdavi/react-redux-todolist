@@ -6,8 +6,8 @@ import "./style/main.css";
 
 function App() {
   return (
-    <div className=" mt-24 flex flex-col">
-      <h1 className=" inline text-center mb-16 text-3xl ">Todo App</h1>
+    <div className=" mt-32 flex flex-col">
+      <h1 className=" inline text-center mb-20 text-5xl ">Todo App</h1>
       <Todos />
       <ShowTodos />
     </div>

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { connect } from "react-redux";
 import { addTodos, deleteTodos, updateTodos,completeTodos } from "../redux/reducer";
-
+import {GoPlus} from "react-icons/go";
 const mapStateToProps = (state) => {
     return {
       todos: state,
@@ -25,14 +25,14 @@ const Todos = (props) => {
   };
 
   return (
-    <div className=" ">
+    <div className="flex justify-center">
       <input
         type="text"
         onChange={(e) => handleChange(e.target.value)}
-        className=""
+        className="todo-input w-96 h-10 border-none pt-2 pr-4  rounded-md focus:outline-none "
       />
       <button
-        className=""
+        className="add-btn ml-4 flex justify-center items-center  rounded-full text-center text-2xl w-14 h-14 cursor-pointer focus:outline-none"
         onClick={(click) =>
           props.addTodo({
             id: Math.floor(Math.random() * 1000),
@@ -41,7 +41,7 @@ const Todos = (props) => {
           })
         }
       >
-        Add
+        <GoPlus/>
       </button> 
     </div>
   );

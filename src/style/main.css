@@ -1,22 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
-*{
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html{
-    line-height: 1.15;
+html {
+  line-height: 1.15;
 }
-body{
-    background: linear-gradient(190deg,#FFB6C0 30%, #8CDDE8 30%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+body {
+  background: linear-gradient(10deg, #ffb6c0 60%, #8cdde8 30%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-h1{
-    color: #4C8C99;
-    
+h1 {
+  color: #ff7792;
+}
+.todo-input {
+  min-width: 25rem;
+  max-width: 5.5rem;
+  background-color: #ffeae8;
+  align-self: center;
+}
+.todo-input:focus {
+  border: 1.5px solid #8cdde8;
+}
+.add-btn {
+  background-color: #ff7792;
+  color: #ffeae8;
+}
+.showTodos .buttons button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.showTodos ul {
+  list-style: none;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+.card {
+  background: radial-gradient(
+    circle,
+    rgba(252, 185, 194, 0.9) 0%,
+    rgba(255, 234, 232, 0.9) 100%
+  );
+  margin: 0 1rem 1rem 0;
+  position: relative;
+}
+.card textarea {
+  background: none;
+  color: #20556e;
+  border: none;
+}
+.card textarea:focus {
+  border: none;
+}
+.card textarea:disabled {
+  background-color: transparent;
+}
+.card .btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.card .btn button {
+  border-radius: 20%;
+  border: none;
+  margin: 0 0.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #068cba;
+  background-color: transparent;
+}
+
+.card .btn button:focus {
+  outline: none;
+}
+
+.completed {
+  position: absolute;
+  right: 0.3rem;
+  top: 0.3rem;
+  background-color: #867bcd;
+  border: 2px solid #272727;
+  color: #e1ebfd;
+
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+@media Screen and (max-width: 640px) {
+  .displaytodos {
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .displaytodos ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    align-self: center;
+  }
+  .card {
+    margin-right: 0;
+  }
 }
